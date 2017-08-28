@@ -40,14 +40,17 @@
   <property name="moman.commit-hash" value="5c5c2a1e4dea" />
   <property name="moman.url" value="https://bitbucket.org/jpbarrette/moman/get/${moman.commit-hash}.zip" />
 
-  <path id="classpath"/>
-  
+  <path id="classpath">
+    <pathelement path="lib/hsqldb-1.8.0.10.jar"/>
+  </path>
+
   <path id="test.classpath">
     <pathelement location="${common.dir}/build/test-framework/classes/java"/>
     <pathelement location="${common.dir}/build/codecs/classes/java"/>
     <path refid="junit-path"/>
     <pathelement location="${build.dir}/classes/java"/>
     <pathelement location="${build.dir}/classes/test"/>
+    <pathelement path="lib/hsqldb-1.8.0.10.jar"/>
   </path>
 
   <path id="junit.classpath">

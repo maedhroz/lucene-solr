@@ -22,5 +22,10 @@
 
   <import file="../module-build.xml"/>
 
+  <path id="classpath">
+    <path refid="base.classpath"/>
+    <fileset dir="${common.dir}/codecs/lib" includes="*.jar"/>
+  </path>
+
   <target name="-dist-maven" depends="-dist-maven-src-java"/>
 </project>
